@@ -22,7 +22,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/xuxin1955/immortalwrt
+  REPO_URL: https://github.com/l285432769/immortalwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config_small
