@@ -24,6 +24,7 @@ git clone https://github.com/lkiuyu/luci-app-cpu-perf package/luci-app-cpu-perf
 git clone https://github.com/lkiuyu/luci-app-cpu-status package/luci-app-cpu-status
 git clone https://github.com/lkiuyu/luci-app-temp-status package/luci-app-temp-status
 git clone https://github.com/lkiuyu/DbusSmsForwardCPlus package/DbusSmsForwardCPlus
-
+git clone https://gitee.com/l285432769/luci-app-parentcontrol package/luci-app-parentcontrol
+git clone https://gitee.com/l285432769/OpenAppFilter package/OpenAppFilter
 
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
