@@ -178,11 +178,12 @@ jobs:
       if: ${{ inputs.ssh || contains(github.event.action, 'ssh') }}
       
       
-    - name: Config defconfig
+    - name: make defconfig
       id: config
       run: |
        cd openwrt
        make defconfig
+       
     - name: 查看 openwrt 目录
       run: ls -la openwrt/
       
@@ -311,7 +312,7 @@ jobs:
 
 
 
-    - name: Check space usage
+    - name: df -hT
       if: (!cancelled())
       run: df -hT
 
@@ -349,7 +350,7 @@ jobs:
         fi
         echo "" >> release.txt
         {
-          echo "## 高通410系列 immortalwrt"
+          echo "## 高通8916系列 immortalwrt"
           echo "- 管理地址: 192.168.100.1"
           echo "  内核版本: $(grep -h "kmod-usb2" ${{ env.FIRMWARE }}/*.manifest 2>/dev/null | awk -F' - ' '{print $2}' | grep -oP '6\.[0-9]+\.[0-9]+' | head -1 || echo '未知')"
           echo "  默认用户: root"
