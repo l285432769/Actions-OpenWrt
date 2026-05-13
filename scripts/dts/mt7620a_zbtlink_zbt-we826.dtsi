@@ -58,7 +58,7 @@
 	flash0: flash@0 {
 		compatible = "jedec,spi-nor";
 		reg = <0>;
-		spi-max-frequency = <10000000>;
+		spi-max-frequency = <25000000>;
 
 		partitions {
 			compatible = "fixed-partitions";
@@ -106,20 +106,9 @@
 	};
 };
 
-&gpio1 {
-	status = "okay";
-};
-
-&gpio3 {
-	status = "okay";
-};
-
-&sdhci {
-	status = "disabled";
-};
-
 &ehci {
 	status = "okay";
+	mediatek,usb-delay-reset = <100>;
 };
 
 &ohci {
@@ -129,7 +118,6 @@
 &ethernet {
 	nvmem-cells = <&macaddr_factory_4>;
 	nvmem-cell-names = "mac-address";
-
 	mediatek,portmap = "wllll";
 };
 
@@ -140,11 +128,27 @@
 
 &state_default {
 	default {
-		groups = "i2c", "uartf", "wled", "spi refclk", "pa", "nd_sd";
+		groups = "i2c", "uartf", "wled", "nd_sd", "spi refclk";
 		function = "gpio";
 	};
 };
 
+&sdhci {
+	status = "disabled";
+};
+
 &pcie {
+	status = "okay";
+};
+
+&gpio1 {
+	status = "okay";
+};
+
+&gpio2 {
+	status = "okay";
+};
+
+&gpio3 {
 	status = "okay";
 };
