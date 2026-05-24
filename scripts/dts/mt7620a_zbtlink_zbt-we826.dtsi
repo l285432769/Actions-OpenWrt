@@ -113,14 +113,6 @@
 
 &pcie {
     status = "okay";
-
-    pcie0: pcie@0 {
-        status = "okay";
-    };
-};
-
-&sdhci {
-    status = "disabled";
 };
 
 &gpio1 {
