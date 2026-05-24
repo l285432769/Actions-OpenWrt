@@ -34,13 +34,6 @@
 			gpios = <&gpio1 3 GPIO_ACTIVE_LOW>;
 			linux,default-trigger = "phy1tx";
 		};
-
-		usb {
-			label = "green:usb";
-			gpios = <&gpio1 2 GPIO_ACTIVE_LOW>;
-			linux,default-trigger = "netdev";
-			linux,default-device = "usb0";
-		};
 	};
 
 	keys {
