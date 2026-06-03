@@ -1,4 +1,4 @@
-name: Build_LEDE_glinet_gl-mt750
+name: Build_imm21.02_glinet_gl-mt750
 
 on:
   repository_dispatch:
@@ -16,9 +16,9 @@ on:
         type: boolean
 
 env:
-  CONFIG_FILE: 'config/GL-MT750_lede.config'
-  REPO_URL: https://github.com/xuxin1955/lede
-  REPO_BRANCH: master
+  CONFIG_FILE: 'config/GL-MT750.config'
+  REPO_URL: https://github.com/immortalwrt/immortalwrt
+  REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
   DIY_P7_SH: diy-part7.sh
   UPLOAD_FIRMWARE: true
