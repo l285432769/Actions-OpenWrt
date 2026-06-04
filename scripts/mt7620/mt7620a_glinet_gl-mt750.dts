@@ -17,6 +17,7 @@
 		air {
 			label = "green:wifi";
 			gpios = <&gpio3 0 GPIO_ACTIVE_LOW>;
+			default-state = "on";
 			linux,default-trigger = "phy0tx";
 		};
 	};
