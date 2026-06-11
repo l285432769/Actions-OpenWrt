@@ -1,4 +1,4 @@
-name: Build_x-wrt_gl-mt750
+name: Build_LEDE_gl-mt750
 
 on:
   repository_dispatch:
@@ -17,7 +17,7 @@ on:
 
 env:
   CONFIG_FILE: 'config/gl-mt750.config'
-  REPO_URL: https://github.com/x-wrt/x-wrt
+  REPO_URL: https://github.com/xuxin1955/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   DIY_P7_SH: diy-part7.sh
@@ -27,7 +27,7 @@ env:
   
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout
